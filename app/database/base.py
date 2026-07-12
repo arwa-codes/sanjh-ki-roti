@@ -6,4 +6,6 @@ from app.models.plan import Plan  # noqa
 from app.models.subscription import Subscription, SubscriptionPause  # noqa
 from app.models.billing import BillingTransaction, MealAddon, Referral  # noqa
 from app.models.delivery import Route, DeliveryPartner, DeliveryLog  # noqa
+from app.models.complaint import Complaint  # noqa
+from app.models.notification import NotificationQueue  # noqa
 

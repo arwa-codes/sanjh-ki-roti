@@ -9,6 +9,7 @@ from app.api.v1.subscriptions import router as subscriptions_router
 from app.api.v1.billing import router as billing_router
 from app.api.v1.deliveries import router as deliveries_router
 from app.api.v1.analytics import router as analytics_router
+from app.api.v1.complaints import router as complaints_router
 
 
 # Setup JSON logging interceptors on startup
@@ -38,6 +39,7 @@ app.include_router(subscriptions_router, prefix="/api/v1/subscriptions", tags=["
 app.include_router(billing_router, prefix="/api/v1/billing", tags=["Billing"])
 app.include_router(deliveries_router, prefix="/api/v1/deliveries", tags=["Deliveries"])
 app.include_router(analytics_router, prefix="/api/v1/analytics", tags=["Analytics"])
+app.include_router(complaints_router, prefix="/api/v1/complaints", tags=["Complaints"])
 
 @app.get("/health", tags=["System Health"], summary="Service Health Check Status")
 def health_check() -> dict:
