@@ -19,6 +19,7 @@ class User(Base):
 
     # Relationships
     customer = relationship("Customer", back_populates="user", uselist=False, cascade="all, delete-orphan")
+    delivery_profile = relationship("DeliveryPartner", back_populates="user", uselist=False, cascade="all, delete-orphan")
 
     def __repr__(self) -> str:
         return f"<User email={self.email} role={self.role}>"

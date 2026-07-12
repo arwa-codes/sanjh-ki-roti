@@ -21,6 +21,7 @@ class Subscription(Base):
     # Relationships
     customer = relationship("Customer", backref="subscriptions")
     plan = relationship("Plan")
+    delivery_logs = relationship("DeliveryLog", back_populates="subscription", cascade="all, delete-orphan")
 
 class SubscriptionPause(Base):
     __tablename__ = "subscription_pauses"
